@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Spinner from '../spinner/spinner';
+import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage'
 import useMarvelService from '../../services/MarvelService';
 
@@ -33,7 +33,7 @@ const CharList = (props) => {
         setCharList(charList => [...charList, ...newCharList]);
         setNewItemLoading(newItemLoading => false);
         setOffset(offset => offset + 9);
-        setCharEnded(charEnded => ended);
+        setCharEnded(ended);
     }
 
     const itemRefs = useRef([]);
@@ -56,7 +56,7 @@ const CharList = (props) => {
                     className="char__item"
                     tabIndex={0}
                     ref={el => itemRefs.current[i] = el}
-                    key={item.id}
+                    key={i}
                     onClick={() => {
                         props.onCharSelected(item.id);
                         focusOnItem(i);

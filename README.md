@@ -1,6 +1,8 @@
 # Marvel information portal
 A service for viewing comics and characters from the Marvel Universe.
 
+Prewiew: https://nikitaklimuk.github.io/Marvel-api-project
+
 Technology Stack:
 Javascript, React, SCSS, HTML, Formik, React router, FSM, Marvel API
 
